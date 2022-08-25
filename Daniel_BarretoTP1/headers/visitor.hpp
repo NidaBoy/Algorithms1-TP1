@@ -11,6 +11,7 @@
 class Visitor{
 
 	private:
+		int _id;
 		int _num_bikes;
 		int _alloc_bike;
 		int _bikes_list_pointer;
@@ -20,6 +21,7 @@ class Visitor{
 	public:
 
 		Visitor();
+		int get_id();
 		void delete_memory();
 		int propose_next_bike();
 		int get_alloc_bike();

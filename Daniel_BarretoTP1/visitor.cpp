@@ -33,11 +33,16 @@ int Visitor::propose_next_bike(){
 	return PROPOSAL_DISMISS;
 }
 
+int Visitor::get_id(){
+	return this->_id;
+}
+
 int Visitor::get_alloc_bike(){
 	return this->_alloc_bike;
 }
 
-int Visitor::set_prefer_list(Bike *bikes, int *prefer_bikes, int num_bikes){
+int Visitor::set_prefer_list(int id, Bike *bikes, int *prefer_bikes, int num_bikes){
+	this->_id = id;
 	this->_num_bikes = num_bikes;
 	this->_alloc_bike = -1;
 	this->bikes = bikes;
